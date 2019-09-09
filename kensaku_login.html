@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="kensaku_login_css.css">
+</head>
+<body>
+    <form>
+        <svg id="svgMain" viewbox="0 0 120 110" xmlns="http://www.w3.org/2000/svg">
+            <!-- Body -->
+            <path d="M38,115 C45,80 75,80 82,115" stroke="black" stroke-width="3.5" fill="none"/>
+    
+            <!-- Head -->
+            <ellipse cx="60" cy="60" rx="40" ry="35" fill="#c3c3c3" stroke="#000" stroke-width="3.5" />
+    
+            <g class="ears">
+                <!-- Left -->
+                <path d="M22,55 C8,55 3,86 20,85 C35,87 32,55 22,55" fill="black" />
+                <!-- Right -->
+                <path d="M100,55 C114,55 119,86 102,85 C87,87 90,55 100,55" fill="black" />
+            </g>
+    
+            <g class="helmet">
+                <path d="M33,86 L34,56 C34,52 87,52 87,56 L87,56 L87.5,85 C76,99 43,99 33,85" fill="white" stroke="black" stroke-width="3.5" stroke-linejoin="round" />
+            </g>
+    
+            <g class="antenna">
+                <path d="M60,25 V20" stroke="black" stroke-width="3.5" />
+                <circle cx="60" cy="15" r="5" stroke="black" stroke-width="3.5" fill="red" />
+            </g>
+    
+            <g class="eyes">
+                <!-- Left -->
+                <circle cx="44" cy="70" r="4.5" fill="black" />
+    
+                <!-- Right -->
+                <circle cx="76" cy="70" r="4.5" fill="black" />
+            </g>
+    
+            <g class="nose">
+                <!-- Nose -->
+                <path d="M60,82 L57,78 L63,78 L60,82" stroke="black" stroke-width="3" stroke-linejoin="round" />
+    
+                <!-- Mustache -->
+                <path d="M54,85 C56,86 59,87 60,82" stroke="black" stroke-width="3.5" fill="none" />
+                <path d="M60,82 C61,87 64,86 66,85" stroke="black" stroke-width="3.5" fill="none" />
+    
+                <circle cx="54.5" cy="85" r="1.8" fill="black" />
+                <circle cx="65.5" cy="85" r="1.8" fill="black" />
+            </g>
+        </svg>
+
+        <!-- Input -->
+        <input type="text" placeholder="email@yahoo.com">
+        <input type="password" placeholder="Password">
+    </form>
+</body>
+<script src="kensaku_login_script.js"></script>
+</html>

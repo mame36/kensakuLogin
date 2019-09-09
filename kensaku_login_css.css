@@ -1,0 +1,109 @@
+form {
+    width: 300px;
+    padding: 60px 25px 80px;
+    background: green;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 메인 svg 화면 */
+#svgMain {
+    width: 70%;
+    border-radius: 50%;
+    background: #fff;
+    margin-bottom: 40px;
+    align-self: center;
+    transform-style: preserve-3d;
+}
+
+input {
+    font-size: 16px;
+    border: 0;
+    border-radius: 5px;
+    outline: 0; 
+    padding: 10px 15px;
+    margin-top: 15px;
+}
+
+
+
+/* 눈동자 애니메이션(메일창) */
+
+@keyframes eyes-on {
+    0% {
+        transform: rotate3d(0.5, 0.25, 0, 5deg) !important;
+    }
+
+    100% {
+        transform: rotate3d(-0.5, -0.5, 0, 5deg);
+    }
+}
+
+/* 얼굴 애니메이션(패스워드) */
+
+@keyframes lookaway-up {
+    from {
+        transform: rotate3d(.1, 0, -.01, 10deg);
+    }
+
+    to {
+        transform: rotate3d(.1, -.05, -.01, 10deg);
+    }
+}
+
+
+/* 눈 코 기초값 잡아주기 */
+
+.eyes {
+    transform-origin: 50% 50% -40px;
+}
+
+.nose {
+    transform-origin: 50% 50% -40px;
+}
+
+
+/* 눈, 코에 애니메이션을 0.5초로 설정 */
+/* 이게 없으면 리셋(눈 코 입 돌아올때) 할때 바로돌아와서 이상함 */
+
+.eyes, .nose {
+    transition: transform .5s;
+}
+
+
+
+/* 메일창 클릭시 지속 애니메이션 */
+.eyes-on .eyes {
+    transition-duration: 1s;
+    animation: 2s infinite alternate;
+}
+
+/* 메일창 클릭시 눈동자 아래로 향하는 애니메이션 */
+.eyes-on .eyes {
+    transform: rotate3d(-0.05, 0, 0, 5deg) !important;
+}
+ 
+/* 눈동자 애니메이션 실행 */
+.eyes-on.moving .eyes{
+    animation-name: eyes-on;
+}
+
+
+/* 패스워드 애니메이션 */
+.look-away .eyes,
+.look-away .nose {
+    transition-duration: .6s;
+    animation: 3s infinite alternate;
+}
+
+/* 패스워드창 클릭시 눈 올리는 애니메이션 */
+.look-away.up .eyes,
+.look-away.up .nose {
+    transform: rotate3d(.1, 0, 0, 10deg) !important;
+}
+
+/* 애니메이션 실행 */
+.look-away.playing.up .eyes,
+.look-away.playing.up .nose {
+    animation-name: lookaway-up;
+}
