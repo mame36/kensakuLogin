@@ -1,7 +1,7 @@
 form {
     width: 300px;
     padding: 60px 25px 80px;
-    background: green;
+    background: red;
     display: flex;
     flex-direction: column;
 }
